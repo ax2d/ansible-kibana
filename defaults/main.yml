@@ -5,7 +5,8 @@ kibana_arch: "x64"
 kibana_dir: "/opt"
 kibana_host: "0.0.0.0"
 kibana_port: "5601"
-kibana_elasticsearch: "http://localhost:9200"
+kibana_elasticsearch_port: "9200"
+kibana_elasticsearch: "http://{{ groups.elasticsearch[0] }}:{{ kibana_elasticsearch_port }}"
 kibana_index: ".kibana"
 
 kibana_log: /var/log/kibana.log
